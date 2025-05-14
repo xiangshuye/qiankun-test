@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {VueLoaderPlugin} = require('vue-loader')
+const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
   entry: {
@@ -56,16 +55,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'vue 练习',
-      filename: path.resolve(__dirname, '../dist/index.html'),
-      template: path.resolve(__dirname, '../public/index.html'),
-      inject: true,
-    }),
-    new VueLoaderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+  plugins: [new VueLoaderPlugin(), new webpack.HotModuleReplacementPlugin()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '../src'),

@@ -52,20 +52,6 @@ module.exports = merge(baseConfig, {
           },
         ],
       },
-      {
-        test: /.(sass|scss)$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              esModule: false,
-            },
-          },
-          'postcss-loader',
-          'sass-loader',
-        ],
-      },
     ],
   },
   plugins: [new BundleAnalyzerPlugin()],

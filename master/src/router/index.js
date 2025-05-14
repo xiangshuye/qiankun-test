@@ -1,11 +1,11 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      redirect: '/app1'
+      component: () => import('@/layout/MiddlePage.vue'),
     },
     // {
     //   path: '/app1',
@@ -35,6 +35,6 @@ const router = createRouter({
       component: () => import('@/layout/MiddlePage.vue'),
     },
   ],
-})
+});
 
-export default router
+export default router;

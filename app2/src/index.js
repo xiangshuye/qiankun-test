@@ -1,22 +1,22 @@
-import './public-path'
-import { createApp } from 'vue'
-import routes from './router/index'
-import {createRouter, createWebHistory} from 'vue-router'
+import './public-path';
+import { createApp } from 'vue';
+import routes from './router/index';
+import { createRouter, createWebHistory } from 'vue-router';
 
-import App from './App.vue'
+import App from './App.vue';
 
-let app
-let router
+let app;
+let router;
 function render(props = {}) {
   const { container } = props;
   router = createRouter({
     history: createWebHistory(window.__POWERED_BY_QIANKUN__ ? '/app2/' : '/'),
-    routes
-  })
+    routes,
+  });
 
-  app = createApp(App)
-  app.use(router)
-  app.mount(container ? container : '#app')
+  app = createApp(App);
+  app.use(router);
+  app.mount(container ? container.querySelector('#sub-app2') : '#sub-app2');
 }
 
 // 独立运行时
@@ -43,9 +43,9 @@ export async function mount(props) {
  * 应用每次 切出/卸载 会调用的方法，通常在这里我们会卸载微应用的应用实例
  */
 export async function unmount(props) {
-  app.unmount()
-  router = null
-  app = null
+  app.unmount();
+  router = null;
+  app = null;
 }
 
 /**

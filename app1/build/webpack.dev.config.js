@@ -5,15 +5,16 @@ const baseConfig = require('./webpack.base.config');
 
 module.exports = merge(baseConfig, {
   mode: 'development',
-  // output: {
-  //   path: path.resolve(__dirname, '../dist'),
-  //   filename: '[name].js',
-  //   publicPath: '/',
-  // },
-  output:{
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    filename: '[name].js',
+    publicPath: '/',
+    // },
+    // output: {
     library: 'app1',
     libraryTarget: 'umd',
     chunkLoadingGlobal: 'webpackJsonp_app1',
+    globalObject: 'window',
   },
   devServer: {
     historyApiFallback: true,
@@ -60,20 +61,6 @@ module.exports = merge(baseConfig, {
           },
         ],
       },
-      {
-        test: /.(sass|scss)$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              esModule: false,
-            },
-          },
-          'postcss-loader',
-          'sass-loader',
-        ],
-      },
     ],
-  }
+  },
 });

@@ -1,7 +1,7 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
 
-import view1 from '@/views/view1.vue'
-import view2 from '@/views/view2.vue'
+import view1 from '@/views/view1.vue';
+import view2 from '@/views/view2.vue';
 
 const routes = [
   {
@@ -25,6 +25,6 @@ const routes = [
     },
     component: () => import('@/views/view2.vue'),
   },
-]
+];
 
-export default routes
+export default routes;

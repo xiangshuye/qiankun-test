@@ -14,7 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.19.3",
-    "element-plus": "^2.4.2",
     "qiankun": "^2.10.15",
     "vue": "^3.3.7",
     "vue-router": "^4.2.5"
@@ -41,11 +40,9 @@
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.4.5",
-    "node-sass": "^7.0.0",
     "ora": "^5.4.1",
     "postcss-loader": "^6.2.1",
     "prettier": "^2.5.1",
-    "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
     "vue-loader": "^17.3.1",
